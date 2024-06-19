@@ -28,6 +28,7 @@ COPY . .
 ARG BUILD_TARGET=app
 
 # Build the project
+RUN rm -r /app/build
 RUN mkdir build
 
 # Use the build argument to decide what to build and run
@@ -39,7 +40,7 @@ RUN if [ "$BUILD_TARGET" = "test" ] ; then \
 
 # Default command
 CMD if [ "$BUILD_TARGET" = "test" ] ; then \
-        ./build/test/MemoryManagementTests ; \
+        ./build/test/ReservationSystemTest ; \
     else \
-        ./build/src/main.cpp; \
+        ./build/src/ReservationSystemApp; \
     fi

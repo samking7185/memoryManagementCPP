@@ -11,4 +11,4 @@ target_link_libraries(ReservationSystemTest
 )
 
 include(GoogleTest)
-gtest_discover_tests(SensorHandlerTest)
+gtest_discover_tests(ReservationSystemTest)
