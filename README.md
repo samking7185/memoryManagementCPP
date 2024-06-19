@@ -17,7 +17,7 @@ docker run --rm reservation_system
 To build and run the application with unit testing
 
 ```
-docker build --build-arg=test reservation_system .
+docker build --build-arg="BUILD_TARGET=test" reservation_system .
 docker run -e BUILD_TARGET=test reservation_system
 ```
 
