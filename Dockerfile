@@ -25,7 +25,7 @@ WORKDIR /app
 # Copy the entire project
 COPY . .
 
-ARG BUILD_TARGET=app
+ARG BUILD_TARGET
 
 # Build the project
 RUN rm -r /app/build
